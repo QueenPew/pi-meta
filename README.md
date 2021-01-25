@@ -4,3 +4,4 @@ Bash script that basically installs a few useful Raspberry Pi things (Installs p
 
 # Notes
 
+Is there anything that should be added in the script? File an issue!
