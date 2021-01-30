@@ -1,15 +1,18 @@
-#!/bin/bash -e
-echo "Setting up /etc/apt/sources.list"
+#!/bin/sh -e
+if [ "$EUID" = 0 ]
+    then echo "You cannot run this script as root! Exiting."
+exit 1
+fi 
 echo "Updating..."
-sudo apt-get update > /dev/null ;
+    sudo apt-get update > /dev/null ;
 echo "Upgrading packages...\n";
-sudo apt-get upgrade -y > /dev/null;
+    sudo apt-get upgrade -y > /dev/null;
 echo "Installing packages...\n";
-sudo apt-get install build-essential cmake git wget curl chromium-browser mesa-utils python3 gcc llvm yad -y > /dev/null;
+    sudo apt-get install build-essential cmake git wget curl chromium-browser mesa-utils python3 gcc llvm yad -y > /dev/null;
 echo "Getting pi-apps and installing it...\n"
-cd $HOME
-git clone https://github.com/Botspot/pi-apps 
-~/pi-apps/install
+    cd $HOME
+    git clone https://github.com/Botspot/pi-apps 
+    ~/pi-apps/install
 echo "Getting mesa dependencies.";
     sudo apt-get install libxcb-randr0-dev libxrandr-dev  libxcb-xinerama0-dev libxinerama-dev libxcursor-dev libxcb-cursor-dev libxkbcommon-dev xutils-dev xutils-dev libpthread-stubs0-dev libpciaccess-dev libffi-dev x11proto-xext-dev libxcb1-dev libxcb-*dev bison flex libssl-dev libgnutls28-dev x11proto-dri2-dev x11proto-dri3-dev libx11-dev libxcb-glx0-dev libx11-xcb-dev libxext-dev libxdamage-dev libxfixes-dev libva-dev x11proto-randr-dev x11proto-present-dev libclc-dev libelf-dev git build-essential mesa-utils libvulkan-dev ninja-build libvulkan1 python-mako libdrm-dev libxshmfence-dev libxxf86vm-dev python3-mako python3-pip libzstd-dev pkg-config -y > /dev/null
     sudo pip3 install meson > /dev/null;
