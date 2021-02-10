@@ -8,7 +8,7 @@ printf "Updating..."
 printf "Upgrading packages...\n";
     sudo apt-get upgrade -y > /dev/null;
 printf "Installing packages...\n";
-    sudo apt-get install build-essential cmake git wget curl gcc llvm yad -y > /dev/null;
+    sudo apt-get install build-essential cmake wget curl gcc llvm yad -y > /dev/null;
 printf "Making the pi-meta folder"
 mkdir $HOME/pi-meta/
 printf "Getting pi-apps and installing it...\n"
