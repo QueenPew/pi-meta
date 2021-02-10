@@ -1,10 +1,10 @@
-# pi-essentials
+# pi-meta
 
-Bash script that basically installs a few useful Raspberry Pi things (Installs pi-apps and compiles Mesa for now). The purpose of this script is simple: it installs a set of essential/very very useful stuff.
-# To run
+ Meta collection of pi scripts. Basically, this collects collections of scripts so you don't have to.
+ # To run
 
-Do ./pi-essentials
+Do ./pi-meta
 
 # Notes
 
-Is there anything that should be added in this script? File an issue!
+Are there any collections of pi scripts that are missing from this? File an issue!
