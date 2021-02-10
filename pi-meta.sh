@@ -10,12 +10,12 @@ printf "Upgrading packages...\n";
 printf "Installing packages...\n";
     sudo apt-get install build-essential cmake wget curl gcc llvm yad -y > /dev/null;
 printf "Making the pi-meta folder"
-mkdir $HOME/pi-meta/
+mkdir $HOME/pi-meta/apps/
 printf "Getting pi-apps and installing it...\n"
-    cd $HOME/pi-meta/
+    cd $HOME/pi-meta/apps
     git clone https://github.com/Botspot/pi-apps 
-    $HOME/pi-meta/pi-apps/install
+    $HOME/pi-meta/apps/pi-apps/install
 printf "Getting pi-bashscripts-files\n"
-    cd $HOME/pi-meta/
+    cd $HOME/pi-meta/apps
     git clone https://github.com/chunky-milk/pi-bashscripts-files
-printf "\nDone! "
+printf "\nDone! The collection of scripts are located in $HOME/pi-meta/apps/ . "
