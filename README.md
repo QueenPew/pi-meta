@@ -3,7 +3,7 @@
  Meta collection of pi scripts. Basically, this collects collections of scripts so you don't have to.
  # To run
 
-Do ./pi-meta
+Do `bash pi-meta.sh`
 
 # Notes
 
